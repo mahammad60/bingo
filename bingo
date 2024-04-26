@@ -1,0 +1,20 @@
+import random
+list_of_lists = [[random.randint(1,30) for _ in range(3)] for _ in range(3)]
+for subliset in list_of_lists:
+     print("|".join(map(str,subliset)))
+while subliset in list_of_lists != "X":
+  user = int(input("guess the next number for bingo "))
+  cool = random.randint(1,30)  
+  cool_found = False
+  print(cool)
+  for subliset in list_of_lists:
+      for i in range(len(subliset)):
+         if subliset[i] == cool: 
+            subliset[i] = "X"
+      print("|".join(map(str,subliset)))
+  if cool and "X" not in subliset:
+       print("not in the list")
+  else:
+        print("in the list")
+
+#user = input("guess the next number for bingo")
